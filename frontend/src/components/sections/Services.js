@@ -12,140 +12,125 @@ const staggerContainer = {
   animate: { transition: { staggerChildren: 0.1 } }
 };
 
-const ServiceCard = ({ icon: Icon, title, description, features, index }) => (
+const SimpleCard = () => (
   <motion.div
     variants={fadeInUp}
     className="bg-stone-50 rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-stone-100 hover:border-emerald-200 group"
-    data-testid={`service-card-${index}`}
+    data-testid="service-card-0"
   >
     <div className="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-emerald-700 transition-colors">
-      <Icon className="w-7 h-7 text-emerald-700 group-hover:text-white transition-colors" />
+      <Calculator className="w-7 h-7 text-emerald-700 group-hover:text-white transition-colors" />
     </div>
-    <h3 className="text-xl font-bold text-slate-900 mb-2">{title}</h3>
-    <p className="text-slate-600 mb-4">{description}</p>
+    <h3 className="text-xl font-bold text-slate-900 mb-2">Vedenie jednoduchého účtovníctva</h3>
+    <p className="text-slate-600 mb-4">Kompletné spracovanie jednoduchého účtovníctva vrátane evidencií, závierky a daňového priznania.</p>
     <ul className="space-y-2">
-      {features.map((feature, idx) => (
-        <li key={idx} className="flex items-start gap-2 text-sm text-slate-500">
-          <CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" />
-          <span>{feature}</span>
-        </li>
-      ))}
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Peňažný denník</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Pokladničná kniha (v tuzemskej aj cudzej mene)</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Knihy pohľadávok a záväzkov</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Evidencia majetku, výpočet odpisov</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Evidencia DPH – daňové priznanie</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Účtovná závierka a výkazy</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Poradenstvo v oblasti JÚ</span></li>
     </ul>
   </motion.div>
 );
 
-const ServiceCardWithSections = ({ icon: Icon, title, description, sections, index }) => (
+const DoubleCard = () => (
   <motion.div
     variants={fadeInUp}
     className="bg-stone-50 rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-stone-100 hover:border-emerald-200 group"
-    data-testid={`service-card-${index}`}
+    data-testid="service-card-1"
   >
     <div className="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-emerald-700 transition-colors">
-      <Icon className="w-7 h-7 text-emerald-700 group-hover:text-white transition-colors" />
+      <Building2 className="w-7 h-7 text-emerald-700 group-hover:text-white transition-colors" />
     </div>
-    <h3 className="text-xl font-bold text-slate-900 mb-2">{title}</h3>
-    <p className="text-slate-600 mb-4">{description}</p>
-    {sections.map((section, sIdx) => (
-      <div key={sIdx} className={sIdx > 0 ? "mt-4" : ""}>
-        <p className="text-sm font-semibold text-slate-700 mb-2">{section.title}</p>
-        <ul className="space-y-2">
-          {section.items.map((item, idx) => (
-            <li key={idx} className="flex items-start gap-2 text-sm text-slate-500">
-              <CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" />
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    ))}
+    <h3 className="text-xl font-bold text-slate-900 mb-2">Vedenie podvojného účtovníctva</h3>
+    <p className="text-slate-600 mb-4">Podvojné účtovníctvo pre firmy s kompletnými výstupmi a ročnou závierkou.</p>
+    <ul className="space-y-2">
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Účtovný denník</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Hlavná kniha, analytická evidencia</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Evidencia pohľadávok a záväzkov</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Evidencia DPH – daňové priznanie</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Evidencia majetku, výpočet odpisov</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Ročná závierka, súvaha, poznámky</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Štatistické výkazy</span></li>
+    </ul>
+  </motion.div>
+);
+
+const ConsultingCard = () => (
+  <motion.div
+    variants={fadeInUp}
+    className="bg-stone-50 rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-stone-100 hover:border-emerald-200 group"
+    data-testid="service-card-2"
+  >
+    <div className="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-emerald-700 transition-colors">
+      <Briefcase className="w-7 h-7 text-emerald-700 group-hover:text-white transition-colors" />
+    </div>
+    <h3 className="text-xl font-bold text-slate-900 mb-2">Podnikateľské poradenstvo</h3>
+    <p className="text-slate-600 mb-4">Praktické poradenstvo v daniach a účtovníctve – zrozumiteľne a podľa aktuálnych predpisov.</p>
+    <ul className="space-y-2">
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Komplexné poradenstvo v daniach</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Spracovanie daňových priznaní</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Aktuálne zmeny daňových predpisov</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Informácie o daňových povinnostiach</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Zakladanie a transformácie firiem</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Zastupovanie pri daňových kontrolách</span></li>
+    </ul>
+  </motion.div>
+);
+
+const PayrollCard = () => (
+  <motion.div
+    variants={fadeInUp}
+    className="bg-stone-50 rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-stone-100 hover:border-emerald-200 group"
+    data-testid="service-card-3"
+  >
+    <div className="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-emerald-700 transition-colors">
+      <Users className="w-7 h-7 text-emerald-700 group-hover:text-white transition-colors" />
+    </div>
+    <h3 className="text-xl font-bold text-slate-900 mb-2">Mzdová agenda</h3>
+    <p className="text-slate-600 mb-4">Spracovanie miezd a povinnej personalistiky vrátane prihlášok, odvodov a ročných výstupov.</p>
+    <ul className="space-y-2">
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Prihlášky/odhlášky do SP a ZP</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Mesačné spracovanie miezd</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Mzdové listy</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Príkazy na úhradu miezd a odvodov</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Ročné zúčtovanie dane</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Potvrdenia pre zamestnancov</span></li>
+    </ul>
+  </motion.div>
+);
+
+const OtherCard = () => (
+  <motion.div
+    variants={fadeInUp}
+    className="bg-stone-50 rounded-xl p-6 hover:shadow-xl transition-all duration-300 border border-stone-100 hover:border-emerald-200 group"
+    data-testid="service-card-4"
+  >
+    <div className="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-emerald-700 transition-colors">
+      <FolderOpen className="w-7 h-7 text-emerald-700 group-hover:text-white transition-colors" />
+    </div>
+    <h3 className="text-xl font-bold text-slate-900 mb-2">Ostatné služby</h3>
+    <p className="text-slate-600 mb-4">Doplnkové služby a administratíva, ktoré vám ušetria čas a starosti.</p>
+    
+    <p className="text-sm font-semibold text-slate-700 mb-2">Výhody spolupráce:</p>
+    <ul className="space-y-2 mb-4">
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Komunikácia s úradmi (DÚ, ZP, SP)</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Zastupovanie pred daňovým úradom</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Zastupovanie pred poisťovňami</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Sekretárske služby</span></li>
+    </ul>
+    
+    <p className="text-sm font-semibold text-slate-700 mb-2">Doplnkové služby:</p>
+    <ul className="space-y-2">
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Finančné a ekonomické analýzy</span></li>
+      <li className="flex items-start gap-2 text-sm text-slate-500"><CheckCircle2 className="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0" /><span>Spracovanie podnikateľského zámeru</span></li>
+    </ul>
   </motion.div>
 );
 
 const ServicesSection = () => {
-  const services = [
-    {
-      icon: Calculator,
-      title: "Vedenie jednoduchého účtovníctva",
-      description: "Kompletné spracovanie jednoduchého účtovníctva vrátane evidencií, závierky a daňového priznania.",
-      features: [
-        "Peňažný denník",
-        "Pokladničná kniha (v tuzemskej aj cudzej mene)",
-        "Knihy pohľadávok a záväzkov",
-        "Evidencia hmotného a nehmotného majetku, výpočet odpisov",
-        "Evidencia sociálneho fondu",
-        "Evidencia DPH – spracovanie daňového priznania",
-        "Spracovanie účtovnej závierky, výkazov k účtovnej závierke, daňové priznanie",
-        "Poradenstvo v oblasti jednoduchého účtovníctva"
-      ]
-    },
-    {
-      icon: Building2,
-      title: "Vedenie podvojného účtovníctva",
-      description: "Podvojné účtovníctvo pre firmy s kompletnými výstupmi a ročnou závierkou.",
-      features: [
-        "Účtovný denník",
-        "Hlavná kniha, kniha analytickej evidencie",
-        "Evidencia pohľadávok a záväzkov, saldokonto",
-        "Evidencia DPH – spracovanie daňového priznania",
-        "Evidencia hmotného a nehmotného majetku, výpočet odpisov",
-        "Ročná účtovná závierka, výkaz ziskov a strát, súvaha, poznámky, daňové priznanie k dani z príjmov",
-        "Poradenstvo v oblasti podvojného účtovníctva",
-        "Spracovanie štatistických výkazov"
-      ]
-    },
-    {
-      icon: Briefcase,
-      title: "Podnikateľské poradenstvo",
-      description: "Praktické poradenstvo v daniach a účtovníctve – zrozumiteľne a podľa aktuálnych predpisov.",
-      features: [
-        "Komplexné poradenstvo v oblasti daní a účtovníctva",
-        "Spracovanie daňových priznaní",
-        "Informácie o aktuálnych zmenách daňových predpisov",
-        "Informácie o daňových povinnostiach",
-        "Poradenstvo pri zakladaní a transformáciách spoločností",
-        "Zastupovanie pri daňových kontrolách"
-      ]
-    },
-    {
-      icon: Users,
-      title: "Mzdová agenda",
-      description: "Spracovanie miezd a povinnej personalistiky vrátane prihlášok, odvodov a ročných výstupov.",
-      features: [
-        "Prihlášky a odhlášky zamestnancov do Sociálnej poisťovne a zdravotných poisťovní",
-        "Spracovanie mesačných miezd pracovníkov",
-        "Mzdové listy",
-        "Spracovanie príkazov na úhradu pri výplate miezd, odvodov a daní",
-        "Ročné zúčtovanie preddavkov na daň z príjmu zo závislej činnosti",
-        "Vyhotovenie potvrdení pre zamestnancov"
-      ]
-    }
-  ];
-
-  const otherServices = {
-    icon: FolderOpen,
-    title: "Ostatné služby",
-    description: "Doplnkové služby a administratíva, ktoré vám ušetria čas a starosti.",
-    sections: [
-      {
-        title: "Výhody spolupráce (komfort a zastupovanie):",
-        items: [
-          "Komunikácia s úradmi – daňový úrad, zdravotné poisťovne, sociálna poisťovňa",
-          "Zastupovanie pred miestne príslušným daňovým úradom",
-          "Zastupovanie pred sociálnou a zdravotnými poisťovňami",
-          "Sekretárske a administratívne služby",
-          "Zabezpečenie uloženia dokumentov do zbierky listín"
-        ]
-      },
-      {
-        title: "Doplnkové služby (jednorazové výstupy):",
-        items: [
-          "Spracovanie finančných a ekonomických analýz",
-          "Spracovanie podnikateľského zámeru"
-        ]
-      }
-    ]
-  };
-
   return (
     <section id="services" className="section-padding bg-white" data-testid="services-section">
       <div className="container-custom">
@@ -175,26 +160,13 @@ const ServicesSection = () => {
           variants={staggerContainer}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8"
         >
-          {services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              index={index}
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
-              features={service.features}
-            />
-          ))}
-          <ServiceCardWithSections
-            index={4}
-            icon={otherServices.icon}
-            title={otherServices.title}
-            description={otherServices.description}
-            sections={otherServices.sections}
-          />
+          <SimpleCard />
+          <DoubleCard />
+          <ConsultingCard />
+          <PayrollCard />
+          <OtherCard />
         </motion.div>
 
-        {/* CTA Section */}
         <motion.div
           initial="initial"
           whileInView="animate"
