@@ -1,0 +1,127 @@
+{
+  "design_system": {
+    "typography": {
+      "font_family": {
+        "heading": "Outfit, sans-serif",
+        "body": "Plus Jakarta Sans, sans-serif"
+      },
+      "scale": {
+        "h1": "text-5xl md:text-6xl font-bold tracking-tight",
+        "h2": "text-3xl md:text-4xl font-semibold tracking-tight",
+        "h3": "text-2xl font-semibold",
+        "body": "text-base md:text-lg leading-relaxed text-slate-600",
+        "small": "text-sm font-medium text-slate-500"
+      }
+    },
+    "colors": {
+      "theme": "light",
+      "palette": {
+        "primary": {
+          "DEFAULT": "#047857",
+          "foreground": "#FFFFFF",
+          "hover": "#065F46"
+        },
+        "secondary": {
+          "DEFAULT": "#D97706",
+          "foreground": "#FFFFFF",
+          "hover": "#B45309"
+        },
+        "background": {
+          "DEFAULT": "#FAFAF9",
+          "paper": "#FFFFFF",
+          "subtle": "#F5F5F4"
+        },
+        "text": {
+          "primary": "#0F172A",
+          "secondary": "#475569",
+          "muted": "#94A3B8"
+        },
+        "border": {
+          "DEFAULT": "#E2E8F0",
+          "focus": "#047857"
+        }
+      }
+    },
+    "spacing": {
+      "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+      "section_padding": "py-16 md:py-24",
+      "element_gap": "gap-6 md:gap-8"
+    },
+    "visual_enhancers": {
+      "radius": "rounded-xl",
+      "shadows": {
+        "card": "shadow-[0_2px_8px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.12)] transition-shadow duration-300",
+        "button": "shadow-md hover:shadow-lg"
+      },
+      "glassmorphism": "bg-white/80 backdrop-blur-md border border-white/20",
+      "gradients": {
+        "hero_overlay": "bg-gradient-to-r from-stone-50/90 to-stone-50/40",
+        "primary_button": "bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800"
+      }
+    }
+  },
+  "components": {
+    "header": {
+      "type": "sticky",
+      "style": "glassmorphism",
+      "elements": ["Logo", "Navigation Links", "Call Now Button (Primary)", "Inquire Button (Outline)"]
+    },
+    "hero": {
+      "layout": "split_screen",
+      "left_content": ["Headline", "Subheadline", "3 Key Benefits (Checkmarks)", "CTA Buttons"],
+      "right_content": ["Hero Image", "Floating Metric Card (e.g., 'Tax Optimized')"],
+      "image_url": "https://images.unsplash.com/photo-1649209979970-f01d950cc5ed?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBhY2NvdW50YW50JTIwb2ZmaWNlJTIwZGVzayUyMGNhbGN1bGF0b3IlMjBmaW5hbmNpYWwlMjBkb2N1bWVudHN8ZW58MHx8fHwxNzcwMDQzNDU3fDA&ixlib=rb-4.1.0&q=85"
+    },
+    "services": {
+      "layout": "bento_grid",
+      "items": [
+        {"title": "Jednoduché účtovníctvo", "icon": "Calculator", "desc": "Kompletné spracovanie pre živnostníkov."},
+        {"title": "Podvojné účtovníctvo", "icon": "Building2", "desc": "Pre s.r.o. a väčšie spoločnosti."},
+        {"title": "Mzdová agenda", "icon": "Users", "desc": "Výplaty, odvody a komunikácia s úradmi."},
+        {"title": "Daňové poradenstvo", "icon": "TrendingUp", "desc": "Optimalizácia a daňové priznania."}
+      ]
+    },
+    "benefits": {
+      "layout": "grid_3_cols",
+      "style": "icon_top_centered",
+      "image_url": "https://images.unsplash.com/photo-1752159684779-0639174cdfac?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMGhhbmRzaGFrZSUyMGNsb3NlJTIwdXAlMjBwcm9mZXNzaW9uYWx8ZW58MHx8fHwxNzcwMDQzNDg0fDA&ixlib=rb-4.1.0&q=85"
+    },
+    "process": {
+      "layout": "stepper_horizontal",
+      "steps": ["Kontakt", "Analýza", "Návrh riešenia", "Spolupráca"]
+    },
+    "about": {
+      "layout": "image_left_text_right",
+      "image_url": "https://images.pexels.com/photos/7654441/pexels-photo-7654441.jpeg",
+      "trust_points": ["Since 2004", "Certified Expert", "Personal Approach"]
+    },
+    "pricing": {
+      "layout": "toggle_switch_cards",
+      "features": ["VAT Payer vs Non-VAT", "Monthly Flat Rate"]
+    },
+    "contact": {
+      "layout": "split_with_map",
+      "image_url": "https://images.unsplash.com/photo-1761724297938-30203b58ed95?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzB8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZyUyMGV4dGVyaW9yJTIwc3Vubnl8ZW58MHx8fHwxNzcwMDQzNDg1fDA&ixlib=rb-4.1.0&q=85"
+    }
+  },
+  "assets": {
+    "icons_library": "lucide-react",
+    "images": {
+      "hero": "https://images.unsplash.com/photo-1649209979970-f01d950cc5ed?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBhY2NvdW50YW50JTIwb2ZmaWNlJTIwZGVzayUyMGNhbGN1bGF0b3IlMjBmaW5hbmNpYWwlMjBkb2N1bWVudHN8ZW58MHx8fHwxNzcwMDQzNDU3fDA&ixlib=rb-4.1.0&q=85",
+      "about": "https://images.pexels.com/photos/7654441/pexels-photo-7654441.jpeg",
+      "trust": "https://images.unsplash.com/photo-1752159684779-0639174cdfac?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMzJ8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMGhhbmRzaGFrZSUyMGNsb3NlJTIwdXAlMjBwcm9mZXNzaW9uYWx8ZW58MHx8fHwxNzcwMDQzNDg0fDA&ixlib=rb-4.1.0&q=85",
+      "contact_bg": "https://images.unsplash.com/photo-1761724297938-30203b58ed95?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzB8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjBvZmZpY2UlMjBidWlsZGluZyUyMGV4dGVyaW9yJTIwc3Vubnl8ZW58MHx8fHwxNzcwMDQzNDg1fDA&ixlib=rb-4.1.0&q=85"
+    }
+  },
+  "instructions_to_main_agent": {
+    "general": "Build a single-page React app. Use 'react-scroll' for navigation. Ensure mobile responsiveness is perfect.",
+    "styling": "Use Tailwind CSS for all styling. Avoid inline styles. Use the defined color palette.",
+    "components": "Use Shadcn UI for Accordion (FAQ), Tabs (Pricing), and Form elements. Customize them to match the Emerald/Gold theme.",
+    "content": "All text must be in Slovak. Use the provided contact details exactly.",
+    "animations": "Add subtle 'framer-motion' entrance animations (fade-up) for each section."
+  },
+  "universal_guidelines": {
+    "do_not": ["Use generic centered layouts", "Use dark gradients", "Use 'Inter' font for headings"],
+    "do": ["Use generous spacing (py-24)", "Use glassmorphism for the sticky header", "Ensure high contrast for text"]
+  }
+}
