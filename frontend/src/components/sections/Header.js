@@ -25,8 +25,8 @@ const Header = () => {
                 <Calculator className="w-6 h-6 text-white" />
               </div>
               <div className="hidden sm:block">
-                <p className="font-bold text-emerald-800 text-lg leading-tight">Účtovníctvo</p>
-                <p className="text-xs text-slate-500">Ing. Zuzana Jedináková</p>
+                <p className="font-bold text-emerald-800 text-lg leading-tight">Vedenie účtovníctva</p>
+                <p className="text-xs text-slate-500">a ekonomické poradenstvo</p>
               </div>
             </div>
           </Link>

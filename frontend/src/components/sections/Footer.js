@@ -26,8 +26,8 @@ const Footer = () => {
                 <Calculator className="w-6 h-6 text-white" />
               </div>
               <div>
-                <p className="font-bold text-white text-lg">Účtovníctvo</p>
-                <p className="text-xs text-slate-400">Ing. Zuzana Jedináková</p>
+                <p className="font-bold text-white text-lg">Vedenie účtovníctva</p>
+                <p className="text-xs text-slate-400">a ekonomické poradenstvo</p>
               </div>
             </div>
             <p className="text-slate-400 text-sm">Profesionálne účtovnícke služby pre živnostníkov a firmy od roku 2004.</p>
