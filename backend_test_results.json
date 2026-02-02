@@ -1,0 +1,92 @@
+{
+  "timestamp": "2026-02-02T14:57:30.583596",
+  "total_tests": 4,
+  "passed_tests": 4,
+  "success_rate": 100.0,
+  "test_results": [
+    {
+      "test_name": "API Root",
+      "method": "GET",
+      "endpoint": "api/",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_data": {
+        "message": "\u00da\u010dtovn\u00edctvo Jedin\u00e1kov\u00e1 API"
+      },
+      "error": null
+    },
+    {
+      "test_name": "Contact Form Submission",
+      "method": "POST",
+      "endpoint": "api/contact",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_data": {
+        "success": true,
+        "message": "\u010eakujeme za Va\u0161u spr\u00e1vu! Ozveme sa V\u00e1m \u010do najsk\u00f4r.",
+        "id": "0d42f57c-522f-4487-b304-b681260e9e89"
+      },
+      "error": null
+    },
+    {
+      "test_name": "Contact Form Validation (Missing Fields)",
+      "method": "POST",
+      "endpoint": "api/contact",
+      "expected_status": 422,
+      "actual_status": 422,
+      "success": true,
+      "response_data": {
+        "detail": [
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "email"
+            ],
+            "msg": "Field required",
+            "input": {
+              "name": "Test User",
+              "phone": "0900123456"
+            },
+            "url": "https://errors.pydantic.dev/2.12/v/missing"
+          },
+          {
+            "type": "missing",
+            "loc": [
+              "body",
+              "message"
+            ],
+            "msg": "Field required",
+            "input": {
+              "name": "Test User",
+              "phone": "0900123456"
+            },
+            "url": "https://errors.pydantic.dev/2.12/v/missing"
+          }
+        ]
+      },
+      "error": null
+    },
+    {
+      "test_name": "Get All Contacts (Admin)",
+      "method": "GET",
+      "endpoint": "api/contacts",
+      "expected_status": 200,
+      "actual_status": 200,
+      "success": true,
+      "response_data": [
+        {
+          "id": "0d42f57c-522f-4487-b304-b681260e9e89",
+          "name": "Test User",
+          "email": "test@example.com",
+          "phone": "0900123456",
+          "message": "Test message from automated testing",
+          "created_at": "2026-02-02T14:57:30.479121Z"
+        }
+      ],
+      "error": null
+    }
+  ]
+}
