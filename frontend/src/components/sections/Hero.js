@@ -46,7 +46,7 @@ const HeroSection = () => {
                 <Phone className="w-5 h-5" />Zavolajte mi
               </a>
               <Link to="contact" smooth={true} duration={500} offset={-80} className="btn-outline flex items-center gap-2 cursor-pointer" data-testid="hero-inquiry-btn">
-                <Send className="w-5 h-5" />Nezáväzný dopyt
+                <Send className="w-5 h-5" />Napíšte mi
               </Link>
             </motion.div>
           </motion.div>

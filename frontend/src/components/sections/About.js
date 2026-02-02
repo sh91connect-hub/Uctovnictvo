@@ -54,9 +54,9 @@ const AboutSection = () => {
                 <p className="text-sm text-slate-500">ku každému klientovi</p>
               </div>
             </motion.div>
-            <motion.div variants={fadeInUp} className="pt-4">
+            <motion.div variants={fadeInUp} className="pt-4 text-center">
               <Link to="contact" smooth={true} duration={500} offset={-80} className="btn-primary inline-flex items-center gap-2 cursor-pointer" data-testid="about-cta">
-                <MessageSquare className="w-5 h-5" />Kontaktujte ma
+                <MessageSquare className="w-5 h-5" />Napíšte mi
               </Link>
             </motion.div>
           </motion.div>

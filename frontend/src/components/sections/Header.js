@@ -53,7 +53,7 @@ const Header = () => {
             </a>
             <Link to="contact" smooth={true} duration={500} offset={-80} className="btn-primary flex items-center gap-2 !py-2 !px-4 cursor-pointer" data-testid="inquiry-btn">
               <MessageSquare className="w-4 h-4" />
-              <span>Dopyt</span>
+              <span>Napíšte mi</span>
             </Link>
           </div>
 
@@ -75,7 +75,7 @@ const Header = () => {
                   <Phone className="w-4 h-4" /> Zavolajte
                 </a>
                 <Link to="contact" smooth={true} duration={500} className="btn-primary flex items-center justify-center gap-2 flex-1 cursor-pointer" onClick={() => setIsMenuOpen(false)}>
-                  <MessageSquare className="w-4 h-4" /> Dopyt
+                  <MessageSquare className="w-4 h-4" /> Napíšte mi
                 </Link>
               </div>
             </nav>
