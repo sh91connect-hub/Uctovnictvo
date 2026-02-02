@@ -31,7 +31,7 @@ const HeroSection = () => {
               </h1>
             </motion.div>
             <motion.p variants={fadeInUp} className="text-lg text-slate-600 leading-relaxed max-w-xl">
-              Kompletné ekonomické služby pre fyzické a právnické osoby. Od založenia firmy až po daňové priznania - všetko na jednom mieste.
+              Zabezpečujem kompletné vedenie účtovníctva, mzdovú agendu aj podnikateľské poradenstvo. Vyberte si, s čím potrebujete pomôcť – všetko riešim prehľadne, načas a s dôrazom na presnosť.
             </motion.p>
             <motion.ul variants={fadeInUp} className="space-y-3">
               {benefits.map((benefit, index) => (

@@ -141,16 +141,9 @@ const ServicesSection = () => {
           variants={fadeInUp}
           className="text-center mb-16"
         >
-          <span className="inline-block bg-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-            Služby
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
             Služby
           </h2>
-          <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Zabezpečujem kompletné vedenie účtovníctva, mzdovú agendu aj podnikateľské poradenstvo. 
-            Vyberte si, s čím potrebujete pomôcť – všetko riešim prehľadne, načas a s dôrazom na presnosť.
-          </p>
         </motion.div>
 
         <motion.div
@@ -163,6 +156,15 @@ const ServicesSection = () => {
           <SimpleCard />
           <DoubleCard />
           <ConsultingCard />
+        </motion.div>
+
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+          className="grid md:grid-cols-2 gap-6 mb-8 max-w-4xl mx-auto"
+        >
           <PayrollCard />
           <OtherCard />
         </motion.div>
