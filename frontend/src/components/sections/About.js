@@ -24,10 +24,10 @@ const AboutSection = () => {
           variants={staggerContainer}
           className="max-w-4xl mx-auto"
         >
-          {/* Header s fotkou - vycentrované */}
-          <motion.div variants={fadeInUp} className="flex flex-col items-center gap-6 mb-8">
+          {/* Header s fotkou - vedľa seba, vycentrované */}
+          <motion.div variants={fadeInUp} className="flex flex-col md:flex-row items-center justify-center gap-8 mb-8">
             {/* Kruhová fotka */}
-            <div className="relative">
+            <div className="relative flex-shrink-0">
               <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shadow-xl border-4 border-white ring-4 ring-emerald-100">
                 <img
                   src="https://images.pexels.com/photos/7654441/pexels-photo-7654441.jpeg"
@@ -42,7 +42,7 @@ const AboutSection = () => {
             </div>
 
             {/* Meno a popis */}
-            <div className="text-center">
+            <div className="text-center md:text-left">
               <span className="inline-block bg-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-3">
                 O mne
               </span>
