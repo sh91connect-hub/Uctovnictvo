@@ -12,85 +12,80 @@ const staggerContainer = {
   animate: { transition: { staggerChildren: 0.1 } }
 };
 
-// KONCEPT 1: Kompaktný bočný layout s menšou fotkou
+// KONCEPT 2: Kruhová profilová fotka s horizontálnym layoutom
 const AboutSection = () => {
   return (
     <section id="about" className="section-padding" data-testid="about-section">
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Image - menšia */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative flex justify-center lg:justify-end"
-          >
-            <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-xl w-[280px] md:w-[320px]">
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+          className="max-w-4xl mx-auto"
+        >
+          {/* Header s fotkou */}
+          <motion.div variants={fadeInUp} className="flex flex-col md:flex-row items-center gap-8 mb-8">
+            {/* Kruhová fotka */}
+            <div className="relative flex-shrink-0">
+              <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shadow-xl border-4 border-white ring-4 ring-emerald-100">
                 <img
                   src="https://images.pexels.com/photos/7654441/pexels-photo-7654441.jpeg"
                   alt="Ing. Zuzana Jedináková"
-                  className="w-full h-[350px] md:h-[400px] object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-emerald-700 text-white rounded-xl p-4 shadow-lg">
-                <p className="text-2xl font-bold">20+</p>
-                <p className="text-emerald-100 text-sm">rokov praxe</p>
+              <div className="absolute -bottom-2 -right-2 bg-emerald-700 text-white rounded-full w-20 h-20 flex flex-col items-center justify-center shadow-lg">
+                <p className="text-xl font-bold leading-none">20+</p>
+                <p className="text-[10px] text-emerald-100">rokov</p>
               </div>
             </div>
-          </motion.div>
 
-          {/* Content */}
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={staggerContainer}
-            className="space-y-5"
-          >
-            <motion.div variants={fadeInUp}>
+            {/* Meno a popis */}
+            <div className="text-center md:text-left">
               <span className="inline-block bg-emerald-100 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-semibold mb-3">
                 O mne
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-3">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-2">
                 Ing. Zuzana Jedináková
               </h2>
-            </motion.div>
-
-            <motion.p variants={fadeInUp} className="text-base text-slate-600 leading-relaxed">
-              Svoju činnosť som začala v roku 2004 ako SZČO na základe živnostenského oprávnenia podporeného dlhoročnou praxou v oblasti účtovníctva, práva a daní.
-            </motion.p>
-
-            <motion.p variants={fadeInUp} className="text-base text-slate-600 leading-relaxed">
-              V súčasnosti pracujem ako ekonóm a zameriavam sa na malé a stredné podnikateľské subjekty, obchodné spoločnosti a drobných živnostníkov.
-            </motion.p>
-
-            <motion.div variants={fadeInUp} className="grid grid-cols-3 gap-3 pt-3">
-              <div className="bg-stone-50 rounded-xl p-3 text-center">
-                <Award className="w-6 h-6 text-emerald-700 mx-auto mb-1" />
-                <p className="font-bold text-slate-900 text-sm">Od roku 2004</p>
-                <p className="text-xs text-slate-500">v odbore</p>
-              </div>
-              <div className="bg-stone-50 rounded-xl p-3 text-center">
-                <Users className="w-6 h-6 text-emerald-700 mx-auto mb-1" />
-                <p className="font-bold text-slate-900 text-sm">Malé a stredné</p>
-                <p className="text-xs text-slate-500">subjekty</p>
-              </div>
-              <div className="bg-stone-50 rounded-xl p-3 text-center">
-                <Shield className="w-6 h-6 text-emerald-700 mx-auto mb-1" />
-                <p className="font-bold text-slate-900 text-sm">Osobný prístup</p>
-                <p className="text-xs text-slate-500">ku klientovi</p>
-              </div>
-            </motion.div>
-
-            <motion.div variants={fadeInUp} className="pt-3 text-center">
-              <Link to="contact" smooth={true} duration={500} offset={-80} className="btn-primary inline-flex items-center gap-2 cursor-pointer" data-testid="about-cta">
-                <MessageSquare className="w-5 h-5" />Napíšte mi
-              </Link>
-            </motion.div>
+              <p className="text-slate-500">Účtovníčka a ekonomická poradkyňa</p>
+            </div>
           </motion.div>
-        </div>
+
+          {/* Text */}
+          <motion.div variants={fadeInUp} className="space-y-4 text-center md:text-left mb-8">
+            <p className="text-base text-slate-600 leading-relaxed">
+              Svoju činnosť som začala v roku 2004 ako SZČO na základe živnostenského oprávnenia podporeného dlhoročnou praxou v oblasti účtovníctva, práva a daní. V súčasnosti pracujem ako ekonóm a zameriavam sa na malé a stredné podnikateľské subjekty, obchodné spoločnosti a drobných živnostníkov.
+            </p>
+          </motion.div>
+
+          {/* Trust points - horizontálne */}
+          <motion.div variants={fadeInUp} className="grid grid-cols-3 gap-4 mb-8">
+            <div className="bg-stone-50 rounded-xl p-4 text-center">
+              <Award className="w-8 h-8 text-emerald-700 mx-auto mb-2" />
+              <p className="font-bold text-slate-900">Od roku 2004</p>
+              <p className="text-sm text-slate-500">v odbore</p>
+            </div>
+            <div className="bg-stone-50 rounded-xl p-4 text-center">
+              <Users className="w-8 h-8 text-emerald-700 mx-auto mb-2" />
+              <p className="font-bold text-slate-900">Malé a stredné</p>
+              <p className="text-sm text-slate-500">podnikateľské subjekty</p>
+            </div>
+            <div className="bg-stone-50 rounded-xl p-4 text-center">
+              <Shield className="w-8 h-8 text-emerald-700 mx-auto mb-2" />
+              <p className="font-bold text-slate-900">Osobný prístup</p>
+              <p className="text-sm text-slate-500">ku každému klientovi</p>
+            </div>
+          </motion.div>
+
+          {/* CTA */}
+          <motion.div variants={fadeInUp} className="text-center">
+            <Link to="contact" smooth={true} duration={500} offset={-80} className="btn-primary inline-flex items-center gap-2 cursor-pointer" data-testid="about-cta">
+              <MessageSquare className="w-5 h-5" />Napíšte mi
+            </Link>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
