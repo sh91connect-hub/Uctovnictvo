@@ -22,7 +22,7 @@ const Header = () => {
           <Link to="hero" smooth={true} duration={500} className="cursor-pointer">
             <div className="flex items-center gap-2" data-testid="logo">
              <img src="/uctologo.svg" alt="Logo" className="h-16 w-auto" />
-<div className="hidden sm:block">
+<div className="block">
   <p className="font-bold text-emerald-800 text-lg leading-tight">Vedenie účtovníctva</p>
   <p className="font-bold text-emerald-800 text-lg leading-tight">a ekonomické poradenstvo</p>
 </div>
