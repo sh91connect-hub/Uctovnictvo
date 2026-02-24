@@ -22,14 +22,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-emerald-700 rounded-lg flex items-center justify-center">
-                <Calculator className="w-6 h-6 text-white" />
-              </div>
-              <div>
-                <p className="font-bold text-white text-lg">Vedenie účtovníctva</p>
-                <p className="text-xs text-slate-400">a ekonomické poradenstvo</p>
-              </div>
-            </div>
+  <img src="/uctologo.svg" alt="Logo" className="h-14 w-auto brightness-0 invert" />
+  <div>
+    <p className="font-bold text-white text-lg">Vedenie účtovníctva</p>
+    <p className="text-xs text-slate-400">a ekonomické poradenstvo</p>
+  </div>
+</div>
             <p className="text-slate-400 text-sm">Profesionálne účtovnícke služby pre živnostníkov a firmy od roku 2004.</p>
           </div>
           <div>
