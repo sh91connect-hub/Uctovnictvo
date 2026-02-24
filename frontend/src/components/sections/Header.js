@@ -21,10 +21,10 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link to="hero" smooth={true} duration={500} className="cursor-pointer">
             <div className="flex items-center gap-2" data-testid="logo">
-             <img src="/uctologo.svg" alt="Logo" className="h-10 w-auto" />
+             <img src="/uctologo.svg" alt="Logo" className="h-16 w-auto" />
 <div className="hidden sm:block">
   <p className="font-bold text-emerald-800 text-lg leading-tight">Vedenie účtovníctva</p>
-  <p className="text-xs text-emerald-800">a ekonomické poradenstvo</p>
+  <p className="text-xs text-emerald-800 text-lg leading-tight">a ekonomické poradenstvo</p>
 </div>
             </div>
           </Link>
