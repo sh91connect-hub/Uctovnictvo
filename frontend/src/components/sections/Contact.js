@@ -149,7 +149,7 @@ const ContactSection = () => {
                 {isSubmitting ? "Odosielam..." : (
                   <>
                     <Send className="w-5 h-5" />
-                    Odoslať dopyt
+                    Odoslať správu
                   </>
                 )}
               </button>
