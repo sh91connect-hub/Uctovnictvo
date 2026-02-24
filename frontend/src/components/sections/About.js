@@ -30,7 +30,7 @@ const AboutSection = () => {
             <div className="relative flex-shrink-0">
               <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shadow-xl border-4 border-white ring-4 ring-emerald-100">
                 <img
-                  src="https://images.pexels.com/photos/7654441/pexels-photo-7654441.jpeg"
+                  src="/jedinakova.jpeg"
                   alt="Ing. Zuzana Jedináková"
                   className="w-full h-full object-cover"
                 />
