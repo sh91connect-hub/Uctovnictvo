@@ -28,7 +28,7 @@ const BenefitsSection = () => {
     { icon: FileText, title: "Kompletná dokumentácia", description: "Zabezpečenie a archivácia všetkých účtovných dokumentov." },
     { icon: Headphones, title: "Osobný prístup", description: "Individuálne riešenia a poradenstvo pre vašu situáciu." },
     { icon: Award, title: "Dlhoročné skúsenosti", description: "V odbore pôsobím od roku 2004 s osvedčenou kvalitou." },
-    { icon: Briefcase, title: "Komplexné služby", description: "Pracujem v programe Kross – Alfa+ (jednoduché účtovníctvo), Omega (podvojné účtovníctvo) a Olymp (mzdy)." },
+    { icon: Briefcase, title: "Pracujem v programe Kross", description: "ALFA plus (jednoduché účtovníctvo), OMEGA (podvojné účtovníctvo) a OLYMP (mzdy a personalistika)." },
   ];
 
   return (
