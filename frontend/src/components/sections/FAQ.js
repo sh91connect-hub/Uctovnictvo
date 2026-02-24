@@ -21,7 +21,7 @@ const FAQSection = () => {
     { question: "Zastupujete aj pri daňovej kontrole?", answer: "Áno, zastupujem klientov pred daňovým úradom, sociálnou poisťovňou aj zdravotnými poisťovňami. V prípade kontroly pripravím všetky potrebné dokumenty." },
     { question: "Ako dlho trvá spracovanie podnikateľského zámeru?", answer: "Spracovanie podnikateľského zámeru pre ÚPSVaR trvá zvyčajne 3-5 pracovných dní, v závislosti od komplexnosti vášho projektu." },
     { question: "Ponúkate aj online konzultácie?", answer: "Áno, okrem osobných stretnutí ponúkam aj telefonické a online konzultácie. Stačí sa dohodnúť na vhodnom termíne." },
-    { question: "V akom účtovnom programe pracujete?", answer: "Pracujem v programe Kross – pre jednoduché účtovníctvo používam Alfa+, pre podvojné účtovníctvo Omega a pre mzdy program Olymp." },
+    { question: "V akom účtovnom programe pracujete?", answer: "Pracujem v programe KROS – pre jednoduché účtovníctvo používam ALFA plus, pre podvojné účtovníctvo OMEGA a pre mzdy program OLYMP." },
   ];
 
   return (
