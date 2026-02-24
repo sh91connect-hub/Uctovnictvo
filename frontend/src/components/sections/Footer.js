@@ -1,5 +1,4 @@
 import { Link } from "react-scroll";
-import { Calculator } from "lucide-react";
 
 const Footer = () => {
   const usefulLinks = [
@@ -22,8 +21,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-  <img src="/uctologo.svg" alt="Logo" className="h-14 w-auto brightness-0 invert" />
-  <div>
+              <img src="/uctologo.svg" alt="Logo" className="h-14 w-auto" />
+              <div>
     <p className="font-bold text-white text-lg">Vedenie účtovníctva</p>
     <p className="text-xs text-slate-400">a ekonomické poradenstvo</p>
   </div>
