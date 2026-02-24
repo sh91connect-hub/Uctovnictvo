@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
-import { Phone, Calculator, MessageSquare, Menu, X } from "lucide-react";
+import { Phone, MessageSquare, Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,13 +21,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           <Link to="hero" smooth={true} duration={500} className="cursor-pointer">
             <div className="flex items-center gap-2" data-testid="logo">
-              <div className="w-10 h-10 bg-emerald-700 rounded-lg flex items-center justify-center">
-                <Calculator className="w-6 h-6 text-white" />
-              </div>
-              <div className="hidden sm:block">
-                <p className="font-bold text-emerald-800 text-lg leading-tight">Vedenie účtovníctva</p>
-                <p className="text-xs text-slate-500">a ekonomické poradenstvo</p>
-              </div>
+             <img src="/uctologo.svg" alt="Logo" className="h-10 w-auto" />
+<div className="hidden sm:block">
+  <p className="font-bold text-emerald-800 text-lg leading-tight">Vedenie účtovníctva</p>
+  <p className="text-xs text-emerald-800">a ekonomické poradenstvo</p>
+</div>
             </div>
           </Link>
 
