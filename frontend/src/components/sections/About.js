@@ -56,7 +56,7 @@ const AboutSection = () => {
           {/* Text */}
           <motion.div variants={fadeInUp} className="space-y-4 text-center mb-8">
             <p className="text-base text-slate-600 leading-relaxed">
-              Svoju činnosť som začala v roku 2004 ako SZČO na základe živnostenského oprávnenia podporeného dlhoročnou praxou v oblasti účtovníctva, práva a daní. V súčasnosti pracujem ako ekonóm a zameriavam sa na malé a stredné podnikateľské subjekty, obchodné spoločnosti a drobných živnostníkov.
+              Kompletný účtovný servis pre malé a stredné firmy - jednoduchému a podvojnému účtovníctvu sa venujem od roku 2004 ako SZČO. Mám dlhoročnú prax a skúsenosti v tejto oblasti, keďže doteraz pracujem na pozícii ekonómky. Venujem sa hlavne malým a stredným firmám, a SZČO v oblasti účtovníctva, daní, daňových priznaní a ekonomickému poradenstvu.
             </p>
           </motion.div>
 
