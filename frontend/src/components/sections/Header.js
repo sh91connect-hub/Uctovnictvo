@@ -24,7 +24,7 @@ const Header = () => {
              <img src="/uctologo.svg" alt="Logo" className="h-16 w-auto" />
 <div className="hidden sm:block">
   <p className="font-bold text-emerald-800 text-lg leading-tight">Vedenie účtovníctva</p>
-  <p className="text-xs text-emerald-800 text-lg leading-tight">a ekonomické poradenstvo</p>
+  <p className="font-bold text-emerald-800 text-lg leading-tight">a ekonomické poradenstvo</p>
 </div>
             </div>
           </Link>
