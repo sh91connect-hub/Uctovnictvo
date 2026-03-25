@@ -33,14 +33,35 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus(null);
+    
     try {
-      const response = await axios.post(`${API}/contact`, formData);
-      if (response.data.success) {
-        setSubmitStatus({ type: "success", message: response.data.message });
+      // Odošleme dáta cez Web3Forms priamo na tvoj email
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "79182809-2931-427d-8eff-2d85fe47ca97", // <--- SEM VLOŽ SVOJ KĽÚČ
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+          subject: "Nový dopyt z webu - Účtovníctvo"
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitStatus({ type: "success", message: "Ďakujem za vašu správu! Ozvem sa vám čo najskôr." });
         setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        setSubmitStatus({ type: "error", message: "Nastala chyba pri odosielaní. Skúste to prosím znova." });
       }
     } catch (error) {
-      setSubmitStatus({ type: "error", message: "Nastala chyba pri odosielaní. Skúste to prosím znova." });
+      setSubmitStatus({ type: "error", message: "Nastala chyba pri odosielaní. Skontrolujte pripojenie na internet." });
     } finally {
       setIsSubmitting(false);
     }
