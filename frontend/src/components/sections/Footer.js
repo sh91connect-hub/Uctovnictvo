@@ -50,9 +50,12 @@ const Footer = () => {
             </nav>
           </div>
         </div>
-        <div className="border-t border-slate-800 pt-8 text-center">
-          <p className="text-slate-500 text-sm">© {new Date().getFullYear()} Ing. Zuzana Jedináková. Všetky práva vyhradené.</p>
-        </div>
+       <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+  <p className="text-slate-500 text-sm">© {new Date().getFullYear()} Ing. Zuzana Jedináková. Všetky práva vyhradené.</p>
+  <a href="/gdpr" className="text-slate-500 hover:text-emerald-400 text-sm transition-colors">
+    Ochrana osobných údajov (GDPR)
+  </a>
+</div>
       </div>
     </footer>
   );
