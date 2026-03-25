@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { Phone, CheckCircle2, Send, Award } from "lucide-react";
@@ -13,6 +14,15 @@ const staggerContainer = {
 };
 
 const HeroSection = () => {
+  const heroImages = ["/hero1.jpg", "/hero2.jpg", "/hero3.jpg"];
+const [currentImage, setCurrentImage] = useState(0);
+
+useEffect(() => {
+  const timer = setInterval(() => {
+    setCurrentImage((prev) => (prev + 1) % heroImages.length);
+  }, 4000); // Číslo 4000 znamená, že fotka sa zmení každé 4 sekundy
+  return () => clearInterval(timer);
+}, []);
   const benefits = [
     "Prax od roku 2004",
     "Kompletné ekonomické služby",
@@ -51,10 +61,19 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img src="https://images.unsplash.com/photo-1649209979970-f01d950cc5ed?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBhY2NvdW50YW50JTIwb2ZmaWNlJTIwZGVzayUyMGNhbGN1bGF0b3IlMjBmaW5hbmNpYWwlMjBkb2N1bWVudHN8ZW58MHx8fHwxNzcwMDQzNDU3fDA&ixlib=rb-4.1.0&q=85" alt="Profesionálne účtovnícke služby" className="w-full h-[400px] md:h-[500px] object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 to-transparent"></div>
-            </div>
+           <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[400px] md:h-[500px]">
+  {heroImages.map((img, index) => (
+    <img
+      key={img}
+      src={img}
+      alt="Účtovnícke služby"
+      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+        currentImage === index ? "opacity-100" : "opacity-0"
+      }`}
+    />
+  ))}
+  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent z-10"></div>
+</div>
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.6 }} className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-4 flex items-center gap-3">
               <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center">
                 <Award className="w-6 h-6 text-emerald-700" />
