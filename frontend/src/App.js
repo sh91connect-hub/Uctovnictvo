@@ -13,6 +13,7 @@ import Footer from "@/components/sections/Footer";
 import MobileStickyCTA from "@/components/sections/MobileStickyCTA";
 // Import našej novej GDPR stránky
 import Gdpr from "@/components/sections/Gdpr";
+import CookieBanner from "@/components/sections/CookieBanner";
 
 // Pôvodný obsah tvojej hlavnej stránky zabalíme do jedného bloku
 const MainPage = () => (
