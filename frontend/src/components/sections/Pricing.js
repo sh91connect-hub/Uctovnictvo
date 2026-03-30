@@ -27,7 +27,7 @@ const PricingSection = () => {
   const additionalServices = [
     { name: "Mzdová evidencia a personalistika", price: "15 €/pracovník" },
     { name: "Poradenské a konzultačné služby", price: "15 €/hod" },
-    { name: "Vypracovanie účt. závierky a daň. priznania pre JÚ", price: "80 €" },
+    { name: "Vypracovanie účt. závierky a daň. priznania pre JÚ", price: "100 €" },
     { name: "Vypracovanie účt. závierky a daň. priznania pre PÚ", price: "200 €" },
     { name: "Vypracovanie podnikateľského zámeru (ÚPSVaR)", price: "100 €" },
     { name: "Vybavenie živnostenského listu", price: "50 €" },
