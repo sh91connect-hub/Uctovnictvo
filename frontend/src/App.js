@@ -43,6 +43,7 @@ function App() {
           <Route path="/" element={<MainPage />} />
           <Route path="/gdpr" element={<Gdpr />} />
         </Routes>
+        <CookieBanner />
       </div>
     </Router>
   );
