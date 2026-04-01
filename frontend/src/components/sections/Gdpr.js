@@ -95,9 +95,6 @@ const Gdpr = () => {
                 <p>Svoje preferencie môžete kedykoľvek zmeniť vymazaním cookies vo vašom prehliadači.</p>
               </section>
 
-              <p className="mt-8 text-sm bg-slate-50 p-4 rounded-xl border border-slate-100">
-                Ak sa domnievate, že s vašimi údajmi nenakladám v súlade so zákonom, máte právo podať sťažnosť na Úrad na ochranu osobných údajov SR (Hraničná 12, 820 07 Bratislava, www.dataprotection.gov.sk).
-              </p>
             </div>
 
           </motion.div>
