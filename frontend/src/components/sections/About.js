@@ -35,10 +35,10 @@ const AboutSection = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-2 -right-2 bg-emerald-700 text-white rounded-full w-20 h-20 flex flex-col items-center justify-center shadow-lg">
-                <p className="text-xl font-bold leading-none">20+</p>
-                <p className="text-[10px] text-emerald-100">rokov</p>
-              </div>
+             <div className="absolute -bottom-2 -right-2 bg-emerald-700 text-white rounded-full w-24 h-24 flex flex-col items-center justify-center shadow-lg text-center px-1">
+  <p className="text-xl font-bold leading-none mb-1">20+</p>
+  <p className="text-[10px] leading-tight text-emerald-100">rokov<br/>skúseností</p>
+</div>
             </div>
 
             {/* Meno a popis */}
